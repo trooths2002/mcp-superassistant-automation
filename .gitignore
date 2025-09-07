@@ -1,0 +1,97 @@
+# Dependencies
+/node_modules
+**/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build artifacts
+/dist
+/build
+*.exe
+*.msi
+
+# Runtime and temporary files
+*.log
+*.tmp
+logs/
+temp/
+cache/
+**/.cache/
+
+# Environment and configuration
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# API keys and secrets
+config/secrets/
+**/api-keys.json
+**/credentials.json
+
+# Personal and sensitive data
+data/performance/
+data/trade/
+**/*personal*
+**/*private*
+**/*secret*
+
+# Windows specific
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Output directories - keep structure but exclude generated content
+reports/uploads/*.html
+reports/analytics/*.json
+reports/business-intelligence/*.html
+ops/outputs/images/*
+ops/outputs/videos/*
+ops/outputs/reports/*
+
+# Queue processing files - dynamic content
+mcp-queue/processing/*
+mcp-queue/processed/*
+mcp-queue/failed/*
+mcp-queue/done/*
+
+# IDE & OS files
+.vscode/settings.json
+.vscode/launch.json
+.idea/
+*.swp
+*.swo
+.DS_Store
+*.zip
+
+# Large media files
+*.mp4
+*.avi
+*.mov
+*.wmv
+image grbber/images/*.jpg
+image grbber/images/*.png
+image grbber/images/*.gif
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Package files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+
+# Keep important structure files but exclude content
+!reports/uploads/.gitkeep
+!reports/analytics/.gitkeep
+!ops/outputs/images/.gitkeep
+!ops/outputs/videos/.gitkeep
+!mcp-queue/*/README.md
