@@ -1,0 +1,62 @@
+{
+  "mcpServers": {
+    "filesystem-workspace": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "./workspace"
+      ]
+    },
+    "filesystem-business": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "./business"
+      ]
+    },
+    "memory": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-memory"
+      ]
+    },
+    "puppeteer": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-puppeteer"
+      ]
+    },
+    "sequential-thinking": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ]
+    },
+    "scheduler": {
+      "command": "node",
+      "args": [
+        "servers/scheduler/index.js"
+      ],
+      "cwd": "."
+    },
+    "analytics": {
+      "command": "node",
+      "args": [
+        "servers/analytics/index.js"
+      ],
+      "cwd": "."
+    },
+    "intelligence": {
+      "command": "node",
+      "args": [
+        "servers/intelligence/index.js"
+      ],
+      "cwd": "."
+    }
+  }
+}
