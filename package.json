@@ -1,0 +1,62 @@
+{
+  "name": "mcp-superassistant-automation",
+  "version": "1.0.0",
+  "description": "Enterprise-grade MCP SuperAssistant automation platform with revenue tracking, business intelligence, and 9 automated business processes",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx @srbhptl39/mcp-superassistant-proxy@latest --config ./config.json --outputTransport sse",
+    "automation": ".\\Run-MCP-Daily-Automation.bat",
+    "install-tasks": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts\\Install-Tasks-From-Manifest.ps1 -ManifestPath ops\\orchestrators\\scheduler\\tasks.json",
+    "test": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts\\Test-Manifest.ps1",
+    "setup": "npm install && npm run install-tasks"
+  },
+  "keywords": [
+    "mcp",
+    "automation",
+    "revenue-tracking",
+    "business-intelligence",
+    "youtube-automation",
+    "affiliate-marketing",
+    "content-creation",
+    "task-scheduling",
+    "powershell-automation",
+    "enterprise-automation"
+  ],
+  "author": "Terence Pitter <trooths2002@users.noreply.github.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trooths2002/mcp-superassistant-automation.git"
+  },
+  "bugs": {
+    "url": "https://github.com/trooths2002/mcp-superassistant-automation/issues"
+  },
+  "homepage": "https://github.com/trooths2002/mcp-superassistant-automation#readme",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "@srbhptl39/mcp-superassistant-proxy": "latest"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "os": ["win32"],
+  "cpu": ["x64"],
+  "directories": {
+    "lib": "./servers",
+    "bin": "./scripts",
+    "doc": "./docs",
+    "test": "./tests"
+  },
+  "files": [
+    "scripts/",
+    "servers/",
+    "ops/",
+    "config.json",
+    "README.md",
+    "QUICK_START.md",
+    "PROJECT_STRUCTURE.md",
+    "Run-MCP-Daily-Automation.bat"
+  ]
+}
